@@ -1,13 +1,8 @@
-<ngx-loading-bar></ngx-loading-bar>
-<div class="md:block hidden">
-  <router-outlet></router-outlet>
-</div>
-
-
-<div style="background-image: url('../assets/woman2x.png'); background-position: center; background-size: cover;" class="flex md:hidden text-white h-screen w-full -mt-3 justify-center items-center bg-princeps relative">
-
-  <div class="flex flex-col items-center space-y-5">
-    <div class="flex items-center text-center">
+<div class="container md:flex w-screen md:px-40 md:mb-10 px-10">
+  <!-- left  -->
+  <div class="md:w-1/2">
+    <!-- logo  -->
+    <div class="flex space-x-5 items-center md:mt-28 mt-16">
       <svg id="Group_191" data-name="Group 191" xmlns="http://www.w3.org/2000/svg" width="48.606" height="48.526" viewBox="0 0 66.606 62.526">
         <g id="Group_4" data-name="Group 4" transform="translate(0 0)">
           <rect id="Rectangle_2" data-name="Rectangle 2" width="16.028" height="16.028" transform="translate(50.578 46.497)" fill="#f58420"/>
@@ -32,10 +27,53 @@
       </svg>
 
     </div>
-    <div class="bg-white text-black p-5 rounded-xl">
-      Kindly <a class="text-princeps" href="#">Download</a>  or <a class="text-princeps" href="#">Open</a> Our Mobile App
+
+    <div class="font-extralight text-xl md:mb-32 mb-12">...your quickest access to your loan.</div>
+
+    <!-- loan for everyone -->
+    <div class="md:mt-16 mt-12 space-y-4 md:mb-12 mb-8">
+      <h1 class="text-princeps md:text-4xl text-3xl font-semibold">Log In to your Account</h1>
+      <p class="font-extralight md:text-lg text-md">Enter your Login Information</p>
     </div>
 
+    <!-- form  -->
+      <form (ngSubmit)="login()">
+        <div class="mb-6">
+          <div class="flex relative md:w-8/12 w-full mb-6">
+              <span class="inline-flex items-center px-3 border-t bg-white border-l border-b text-gray-500 shadow-sm text-sm rounded-l-sm" style="border-color: #70707057;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10.499" height="7.961" viewBox="0 0 11.499 7.961">
+                  <g id="Icon_ionic-ios-mail" data-name="Icon ionic-ios-mail" opacity="0.6">
+                    <path id="Path_13" data-name="Path 13" d="M14.78,10.331l-2.974,3.03a.053.053,0,0,0,0,.077l2.081,2.217a.359.359,0,0,1,0,.509.36.36,0,0,1-.509,0l-2.073-2.209a.057.057,0,0,0-.08,0l-.506.514a2.226,2.226,0,0,1-1.587.669,2.27,2.27,0,0,1-1.62-.688l-.487-.495a.057.057,0,0,0-.08,0L4.873,16.163a.36.36,0,0,1-.509,0,.359.359,0,0,1,0-.509l2.081-2.217a.059.059,0,0,0,0-.077l-2.977-3.03a.054.054,0,0,0-.094.039v6.062a.887.887,0,0,0,.885.885h9.73a.887.887,0,0,0,.885-.885V10.369A.055.055,0,0,0,14.78,10.331Z" transform="translate(-3.375 -9.355)" fill="#201b1b"/>
+                    <path id="Path_14" data-name="Path 14" d="M9.641,12.936a1.5,1.5,0,0,0,1.081-.453l4.337-4.414a.869.869,0,0,0-.547-.193H4.773a.863.863,0,0,0-.547.193l4.337,4.414A1.5,1.5,0,0,0,9.641,12.936Z" transform="translate(-3.891 -7.875)" fill="#201b1b"/>
+                  </g>
+                </svg>
+              </span>
+              <input [(ngModel)] = "email" name="email" style="border-color: #70707057;" type="text" id="email" class="input-style" placeholder="Email">
+          </div>
+          <div class="flex relative md:w-8/12 w-full mb-4">
+              <span class="inline-flex items-center px-3 border-t bg-white border-l border-b text-gray-500 shadow-sm text-sm rounded-l-sm" style="border-color: #70707057;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.499" height="5.75" viewBox="0 0 11.499 5.75">
+                  <path id="Icon_ionic-md-key" data-name="Icon ionic-md-key" d="M8.937,12.678a3.03,3.03,0,0,0-2.77-1.99,2.813,2.813,0,0,0-2.792,2.875,2.86,2.86,0,0,0,2.847,2.875,2.955,2.955,0,0,0,2.714-1.99h2.842v1.769h1.91V14.447h1.186V12.678Zm-2.7,1.838a.954.954,0,1,1,.954-.954A.956.956,0,0,1,6.239,14.516Z" transform="translate(-3.375 -10.688)" fill="#787575"/>
+                </svg>
+              </span>
+              <input [(ngModel)] = "password" name="pin" style="border-color: #70707057;" type="password" id="password" class="input-style" placeholder="Password">
+          </div>
+      </div>
+        <div class="my-6">
+          <button type="submit" style="font-size: 14px;" class="bg-princeps w-1/2 rounded-md font-light bg md:px-8 px-5 py-1 md:py-3 text-white">
+              LOG IN
+          </button>
+
+        </div>
+      </form>
   </div>
 
-</div>
+
+
+    <!-- right  -->
+    <div class="md:w-1/2 hidden md:block" style="margin-top: -7px;">
+      <img src="../../../assets/woman2x.png" alt="A lounge sofa" role="img" class="w-full" />
+      <!-- <img src="../../../assets/woman.png" alt="A lounge sofa" role="img" class="w-full lg:hidden" /> -->
+
+    </div>
+  </div>
