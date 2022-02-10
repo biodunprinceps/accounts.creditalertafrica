@@ -75,7 +75,7 @@ loadDashboard(){
   return this.authservice.loadDashboard().subscribe(
     res => {
       this.repayment_amount = res.loans[0].repayment;
-      this.repayment_date = res.loans[0].collection_date
+      this.repayment_date = res.loans[0].due_date
       this.created_date = res.loans[0].created_at
       this.loans = res.loans;
       this.fullname = res.user.fullname

@@ -11,7 +11,7 @@ const headers = new HttpHeaders()
 export class ApplyserviceService {
 
   constructor(private http:HttpClient) { }
-  url: string = "https://api.creditalert.africa/api/v1";
+  url: string = "https://testapi.creditwallet.ng/api/v2/creditalert";
 
   getOffer(data:any){
     return this.http.post<any>(`${this.url}/loan/apply`,data,{ 'headers': headers });
